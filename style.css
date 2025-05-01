@@ -1,7 +1,7 @@
 :root{
-    --main-color: hsl(0, 37%, 75%);
+    --main-color: hsl(0, 24%, 36%);
     --second-color: #c46868;
-    --third-color: #694747;
+    --third-color: #331c1c;
     --fourth-color: #615f5fc3;
     --fifth-color: #dabfbf;
 }
@@ -69,28 +69,132 @@ header .icon a:hover{
     background-color: var(--second-color);
     color: white;
 }
-section{
-   padding: 2rem 9%;
+
+.afrihome{
+    display: flex;
+    background-color: rgb(171, 105, 105);
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    min-height: 100vh;
 }
-h1{
-    font-size: 2.0rem;
+.afrihome .content{
+    max-width: 50rem;
+}
+.afrihome .content h1{
+    font-size: 3.0rem;
     color: var(--third-color);
-    text-align: center;
+}
+.afrihome .content p{
+    font-size: 1.5rem;
+    color: var(--fourth-color);
     margin-bottom: 2rem;
 }
-.home{
-    border-radius: 20px;
-    font-size: 1.5rem;
-    padding: 10;
-    line-height: 1.5;
+.afrihome .content .btn{
     background-color: var(--main-color);
-    margin-top: 8rem;
-    margin-bottom: 2rem; 
-}
-.home .home-text{
-    padding: 2rem 5%;
     color: white;
-    font-size: 1.5rem;
-    line-height: 1.5;
-    text-align: center;
+    padding: 1.5rem 3rem;
+    border-radius: 5rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+section{
+    padding: 1rem 9%;
+ }
+ h1{
+     font-size: 2.0rem;
+     color: var(--third-color);
+     text-align: center;
+     margin-bottom: 2rem;
+ }
+ .about{
+     display: flex;
+     align-items: center;
+     background-color: var(--main-color);
+     min-height: 100vh;
+     margin-top: 1rem;
+     margin-bottom: 2rem; 
+ }
+ .about .content{
+     max-width: 50rem;
+ }
+ 
+ .about.content h1{
+     font-size: 3.0rem;
+     color: var(--third-color);
+ 
+ }
+ .about .content h3{
+     font-size: 2.5rem;
+     color: black;
+     margin-bottom: 2rem;
+ }    
+ .about .content p{
+     font-size: 1.5rem;
+     color: black;
+     margin-bottom: 2rem;
+ }
+ .image-moraa img{
+     width: 140%;
+     height: 90vh;
+     border-radius: 10%;
+     box-shadow: 0 0 1rem rgba(0,0,0,.2);
+     margin-top: 5rem;
+     margin-bottom: 2rem;
+     justify-content: flex-end;
+     align-items: first baseline;
+     display: flex;
+     flex-direction: column;
+ }
+ .btn{
+     display: inline-block;
+     text-align: center;
+     text-decoration: none;
+     background-color: var(--second-color);
+     color: white;
+     padding: 1.5rem 3rem;
+     border-radius: 5rem;
+     font-size: 1.7rem;
+     cursor: pointer;
+     margin-top: 2rem;
+ }
+ .btn:hover{
+     background-color: var(--third-color);
+     color: white;
+     box-shadow: 0 0 1rem rgba(0,0,0,.2);
+ }
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+    header .logo{
+        font-size: 2.5rem;
+    }
+    header .navbar a{
+        font-size: 1.4rem;
+    }
+    header .icon a{
+        font-size: 1.8rem;
+    }
+    h1{
+        font-size: 1.8rem;
+    }
+    .home .content h1{
+        font-size: 2.5rem;
+    }
+    .home .content h3{
+        font-size: 2.0rem;
+    }    
 }
