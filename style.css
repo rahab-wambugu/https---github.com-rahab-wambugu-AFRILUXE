@@ -47,9 +47,6 @@ header .logo{
 header .logo span{
     color: var(--second-color);
 }
-header .logo span:nth-child(2){
-    color: var(--fourth-color);
-}   
 header .navbar a{
     color: black;
     font-size: 1.5rem;
