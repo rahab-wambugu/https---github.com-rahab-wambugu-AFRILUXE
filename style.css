@@ -174,7 +174,7 @@ section{
  }    
  .about .content p{
      font-size: 1.5rem;
-     color: black;
+     color: var(--third-color);
      margin-bottom: 2rem;
  }
  .image-moraa img{
@@ -196,7 +196,7 @@ section{
      text-align: center;
      text-decoration: none;
      background-color: var(--second-color);
-     color: white;
+     color: var(--third-color);
      padding: 1.5rem 3rem;
      border-radius: 5rem;
      font-size: 1.7rem;
@@ -204,7 +204,7 @@ section{
      margin-top: 2rem;
  }
  .btn:hover{
-     background-color: var(---color);
+     background-color: var(--main-color);
      color: white;
      box-shadow: 0 0 1rem rgba(0,0,0,.2);
  }
