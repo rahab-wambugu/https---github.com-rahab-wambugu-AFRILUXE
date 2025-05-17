@@ -21,12 +21,12 @@
                 <a href="#about">ABOUT</a>
                 <a href="#categories">CATEGORIES</a>
                 <a href="#testimonials">TESTIMONIALS</a>
-                <a href="#shop">SHOP</a>
+                <a href="#shop">Gallery</a> <!--changed this from shop to gallery-->
                 <a href="#faq">FAQ</a>
                 <a href="#contact">CONTACT</a>
     </nav>
 
-    <div class="icon"><!--hamburger menu-->
+    <div class="hamburger" id="hamburger"><!--hamburger menu-->
         <a href="#" class="fas fa-shopping-cart"></a>
         <a href="#" class="fas fa-search" id="search5"></a>
         <a href="#" class="fas fa-bars" id="menu btn"></a>
@@ -36,7 +36,7 @@
 <!--header section end-->
 
 
-<section class="afrihome" id="afrihome"><!--home section-->
+<section class="home" id="home"><!--home section-->
     <div class="container"><!--container section-->
         <div class="content"><!--content section-->
             <h1 class="heading">Embrace Afro-Elegance</h1>
@@ -60,7 +60,7 @@
     </div>
 
     <div class="image-moraa">   <!--image section-->
-        <img src="images/africanwoman.png" alt="African theme">
+        <img src="images/jewerly1.jpg" alt="African theme">
     </div>
 </section>   
 <!--about section end-->
@@ -88,16 +88,16 @@
 <section class="testimonials" id="testimonials"><!--testimonials section-->
     <h2 class="heading">Testimonials</h2>
 
-    <div class="box-container-two"><!--box container-->
+    <div class="box-container-two"><!--parent container-->
 
-        <div class="box1"><!--box 1-->
+        <div class="box1"><!--box 1, our comment-->
             <h1>Our Customers Love Us!</h1>
             <p>We take pride in providing our customers with the best shopping experience. Here are some of the wonderful things our customers have to say about us.
             </p><br>
             <i class="fa fa-arrow-left" aria-hidden="true" id="fa-arrow left"></i>
             <i class="fa fa-arrow-right" aria-hidden="true" id="fa-arrow right"></i><!--arrow icons, to be styled-->
         </div>
-        <div class="box2"><!--box 2-->
+        <div class="box2"><!--box 2, client one feedback-->
             <!--quote icon-->
             <p><i class="fa fa-quote-left" aria-hidden="true"></i>
             The quality of the clothing is exceptional! I feel like a queen every time I wear them.
@@ -108,7 +108,7 @@
             <h3>Mary Jane</h3>
         </div>
         
-        <div class="box3"><!--box 3-->
+        <div class="box3"><!--box 3, client two feedback-->
             <p><i class="fa fa-quote-left" aria-hidden="true"></i>
             I absolutely love the quality and design of the clothing. It's a true representation of African elegance!
             <i class="fa fa-quote-right" aria-hidden="true"></i>
@@ -136,36 +136,74 @@
 
 
 <section class="shop" id="shop"><!--shop section-->
-    <h2 class="heading">Shop Now</h2>
+    <h2 class="heading">Gallery</h2>
     <p>Explore our curated collections that showcase the beauty and diversity of African fashion. Each piece is a testament to the artistry and craftsmanship of African designers.</p>
 
-    <div class="box-container-three"><!--box container-->
-        <div class="box1"><!--box 1-->
-            <img src="img.png" alt="Traditional Attire" class="amani">
-        </div>
+    <div class="jewerlybox"> <!--box container, to add images in this div-->
+        <img src="images/jewerly1.jpg" alt="jewerly1" class="jewerly1">
+        <img src="images/jewerly2.jpg" alt="jewerly2" class="jewerly2">
+        <img src="images/jewerly3.jpg" alt="jewerly3" class="jewerly3">
+        <img src="images/jewerly4.jpg" alt="jewerly4" class="jewerly4">
+        <img src="images/jewerly5.jpg" alt="jewerly5" class="jewerly5">
+        <img src="images/jewerly6.jpg" alt="jewerly6" class="jewerly6">
+    </div>
 </section><!--shop section end-->
 
 
  
-<section class="faq" id="faq"><!--faq section-->
-    <h2 class="heading">Frequently Asked Questions</h2>
-    <p>Have questions? We've got answers! Check out our FAQ section for more information about our products, shipping, and more.</p>
-
-    <div class="box-container-four"><!--box container-->
-        <div class="box1"><!--box 1-->
-            <h3>What is AfriLuxe?</h3>
-            <p>AfriLuxe is a luxury African fashion brand that celebrates the rich heritage and artistry of Africa through exquisite clothing and accessories.</p>
-        </div>
-        <div class="box2"><!--box 2-->
-            <h3>How can I place an order?</h3>
-            <p>You can place an order by browsing our collection and adding items to your cart. Once you're ready, proceed to checkout to complete your purchase.</p>
-        </div>
-        <div class="box3"><!--box 3-->
-            <h3>What payment methods do you accept?</h3>
-            <p>We accept various payment methods including credit/debit cards, PayPal, and other secure payment options.</p>
-        </div>
+<div class="faq" id="faq"><!--faq section-->
+    <div class="content"><!--faq content-->
+        <h1>Frequently Asked Questions</h1>
+        <p>Check out our FAQ section for more information about our products, shipping, and more.</p>
+        <img src="images/customer.jpg" alt="FAQ" class="faq-image">
     </div>
-</section><!--faq section end-->
+
+    <div class="container"><!--box container-->
+        <div class="accordion-item"><!--box 1-->
+            <button id="accordion-item-1" aria-expanded="false">
+                <span class="accordion-title">What is Afriluxe?</span>
+                <span class="accordion-icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-content">
+                <p>Afriluxe is a luxury African fashion brand that celebrates the rich heritage and artistry of Africa through exquisite clothing and accessories.</p>
+        </div>
+        <div class="accordion-item"><!--box 2-->
+            <button id="accordion-item-2" aria-expanded="false">
+                <span class="accordion-title">Where are we located?</span>
+                <i class="fa-solid fa-plus" aria-hidden="true" ></i><!--USED FONTAWESOME ICON-->
+            </button>
+            <div class="accordion-content">
+                <p>Afriluxe is a luxury African fashion brand that celebrates the rich heritage and artistry of Africa through exquisite clothing and accessories.</p>
+        </div>
+        <div class="accordion-item"><!--box 3-->
+            <button id="accordion-item-3" aria-expanded="false">
+                <span class="accordion-title">What do we do?</span>
+                <span class="accordion-icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-content">
+                <p>Afriluxe is a luxury African fashion brand that celebrates the rich heritage and artistry of Africa through exquisite clothing and accessories.</p>
+        </div>
+        <div class="accordion-item"><!--box 4-->
+            <button id="accordion-item-4" aria-expanded="false">
+                <span class="accordion-title">Why us?</span>
+                <span class="accordion-icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-content">
+                <p>Afriluxe is a luxury African fashion brand that celebrates the rich heritage and artistry of Africa through exquisite clothing and accessories.</p>
+        </div>
+        <div class="accordion-item"><!--box 5-->
+            <button id="accordion-item-5" aria-expanded="false">
+                <span class="accordion-title">shipping ?</span>
+                <span class="accordion-icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-content">
+                <p>Afriluxe is a luxury African fashion brand that celebrates the rich heritage and artistry of Africa through exquisite clothing and accessories.</p>
+        </div>  
+    </div>
+</div><!--faq section end-->
+
+
+
 
 <section class="contact" id="contact"><!--contact section-->
     <h2 class="heading">Contact Us</h2>
@@ -176,6 +214,6 @@
             <h3>Get in Touch</h3>
 
     
-<script src="js/index.js"></script>
+<script src="index.js"></script>
 </body>
 </html>

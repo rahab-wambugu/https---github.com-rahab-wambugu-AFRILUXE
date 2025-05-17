@@ -1,9 +1,9 @@
 :root{
     --main-color: hsl(0, 24%, 36%);
     --second-color: #c46868;
-    --third-color: #331c1c;
-    --fourth-color: #615f5fc3;
-    --fifth-color: #dabfbf;
+    --third-color: black;
+    /*to add button, heading colours etc*/
+
 }
 *{
     margin: 0;
@@ -30,7 +30,7 @@ header{
     left: 0;
     right: 0;
     z-index: 1000;
-    background-color: var(--third-color);
+    background-color: var(--main-color);
     padding: 2rem 9%;
     display: flex;
     justify-content: space-between;
@@ -47,9 +47,13 @@ header .logo{
 header .logo span{
     color: var(--second-color);
 }
+header .logo span:nth-child(2){
+    color: var(--fourth-color);
+}   
 header .navbar a{
-    color: black;
+    color: var(---color);
     font-size: 1.5rem;
+    font-weight: 510;
     padding: 0 1.0rem;
     display: inline-block;
 }
@@ -57,21 +61,22 @@ header .navbar a:hover{
     color: var(--second-color);
     border-bottom: 1px solid var(--second-color);
 }
-header .icon a{
+header .hamburger a{
     font-size: 2.0rem;
-    color: black;
+    color: var(--third-color);
     margin-left: 1.0rem;
     padding: 0 1.5rem;
     border-radius: 50%;
 }
-header .icon a:hover{
+header .hamburger .a:hover{
     background-color: var(--second-color);
     color: white;
 }
 
-.afrihome{
+.home{/* home page */
     display: flex;
-    background-color: white;
+    background-image: url(/images/africanwoman.png);/*to change bg img*/
+    background-repeat: cover;
     padding: 1rem 9%;
     justify-content: center;
     align-items: center;
@@ -79,7 +84,7 @@ header .icon a:hover{
     margin-bottom: 2px;
     min-height: 100vh;
 }
-.afrihome .container{
+.home .container{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -89,22 +94,21 @@ header .icon a:hover{
     border-radius: 20px;
     height: 75vh;
     width: 220vh;
-    background-color: var(--second-color);
 }
-.afrihome .content{
+.home .content{
     max-width: 60%;
 }
-.afrihome .content h1{
+.home .content h1{
     font-size: 3.0rem;
     color: var(--third-color);
 }
-.afrihome .content p{
+.home .content p{
     font-size: 1.5rem;
     font-weight: 500;
     color: black;
     margin-bottom: 5px;
 }
-.afrihome .content .btn{
+.home .content .btn{
     background-color: var(--main-color);
     color: white;
     padding: 1.5rem 3rem;
@@ -122,7 +126,7 @@ section{
      text-align: center;
      margin-bottom: 2rem;
  }
- .about{
+ .about{/* about page */
      display: flex;
      flex-direction: row;
      background: linear-gradient(var(--second-color), transparent 70%), url(../images/afrihome.jpg) no-repeat center center/cover;
@@ -178,11 +182,11 @@ section{
      margin-top: 2rem;
  }
  .btn:hover{
-     background-color: var(--third-color);
+     background-color: var(---color);
      color: white;
      box-shadow: 0 0 1rem rgba(0,0,0,.2);
  }
- .categories{
+ .categories{/* categories page */
      justify-content: space-between;
      margin-top: 2rem;
      margin-bottom: 2rem;
@@ -292,15 +296,15 @@ section{
 .testimonials .fa-arrow-right{
     font-size: 2rem;
     transition: transform 0.2s;
-    color: var(--second-color);
+    color: var(--third-color);
     margin-left: 1rem;
     margin-bottom: 1rem;
-}
+} /* to make the arrows responsive5 */
 .testimonials .i:hover{
     transform: scale(1.2);
-    color: var(--third-color);
+    color: var(--main-color);
 }
-.testimonials .stars{
+.testimonials .box2 .stars, .testimonials .box3 .stars{
     box-shadow: none;
     color: yellow;
     font-size: 2rem;
@@ -319,14 +323,173 @@ section{
     align-items: center;
     margin-bottom: 20px;
 }
-.shop{
+.shop{/* shop page  */
     margin-top: 50vh;
     margin-bottom: 50px;
 }
-.faq{
-    margin-top: 100px;
-    margin-bottom: 50px;
+
+.shop .h2{
+    font-size: 3.0rem;
+    font-weight: 600; /* to check h1 and h3 on shop page; */
+    color: var(--third-color);
+    margin-bottom: 2rem;
+    text-align: center;
 }
+.shop .p{
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--third-color);/* to check p on shop page; */
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.shop .jewerlybox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.shop .jewerly1{
+
+    height: 50vh;
+    width: 50%;
+    padding: 2px;
+    border-radius: 2px;
+    box-shadow: none;
+    margin-bottom: 10px;
+    flex-basis: 30%;
+}
+.shop .jewerly2{
+    height: 50vh;
+    width: 50%;
+    padding: 2px;
+    border-radius: 2px;
+    box-shadow: none;
+    margin-bottom: 10px;
+    flex-basis: 30%;
+}
+.shop .jewerly3{
+    height: 50vh;
+    width: 50%;
+    padding: 2px;
+    border-radius: 2px;
+    box-shadow: none;
+    margin-bottom: 10px;
+    flex-basis: 30%;
+}
+.shop .jewerly4{
+    height: 50vh;
+    width: 50%;
+    padding: 2px;
+    border-radius: 2px;
+    box-shadow: none;
+    margin-bottom: 10px;
+    flex-basis: 30%;
+}
+.shop .jewerly5{
+    height: 50vh;
+    width: 50%;
+    padding: 2px;
+    border-radius: 2px;
+    box-shadow: none;
+    margin-bottom: 10px;
+    flex-basis: 30%;
+}
+.shop .jewerly6{
+    height: 50vh;
+    width: 50%;
+    padding: 2px;
+    border-radius: 2px;
+    box-shadow: none;
+    margin-bottom: 10px;
+    flex-basis: 30%;
+}
+
+.faq{/* faq page  */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+
+}
+.faq-image{
+    background-image: url(../images/faq.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    width: 100%;
+    height: 100vh;
+}
+.faq h1{
+    font-size: 2.0rem;
+    color: var(--third-color);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.faq p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--third-color);
+    text-align: center;
+    margin-right: 5px;
+    margin-bottom: 2rem;
+}
+.faq .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 4rem;
+    width: 50rem;
+}
+.faq  .accordion .accordion-item{
+    border-bottom: 1px solid var(--second-color);
+}
+.faq  .accordion .accordion-item button[aria-expanded="true"]{
+    border-bottom: 1px solid var(--second-color);
+}
+.faq .accordion .accordion-item button{
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 2rem;
+    font-size: 2.0rem;
+    font-weight: 500;   
+    border: none;
+    outline: none;
+}
+.faq .accordion .accordion-item button:hover, .faq .accordion .accordion-item button:focus{
+    background-color: var(--second-color);
+    color: white;
+    cursor: pointer;
+}
+.faq .accordion .accordion-item button:hover::after, .faq .accordion .accordion-item button:focus::after{
+    cursor: pointer;
+    color: var(--main-color);
+    border-radius: 1px solid var(--third-color);
+}
+.faq .accordion button .accordion-title{
+padding: 1rem 1.5rem 1rem 0;
+}
+.accordion button .icon{
+    display: inblock;
+    position: absolute;
+    right: 1rem;
+    top: 18px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--third-color);
+    border-radius: 50%;
+
+    transform: translateY(-50%);
+    font-size: 2.0rem;
+    color: var(--third-color);
+}
+
 
 
 /* media queries */
