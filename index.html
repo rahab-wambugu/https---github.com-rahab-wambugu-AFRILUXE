@@ -10,26 +10,24 @@
 <link href="/your_path_to_version_6_files/css/all.css" rel="stylesheet" />
 <body>
 <header><!--header section-->
-
-
-    <div class="logo"><!--logo section-->
-        <a href="#">Afri<span>Luxe.</span></a>
-        </div>
-
     <nav class="navbar"> <!--navigation bar-->
-                <a href="#home">HOME</a>
-                <a href="#about">ABOUT</a>
-                <a href="#categories">CATEGORIES</a>
-                <a href="#testimonials">TESTIMONIALS</a>
-                <a href="#shop">Gallery</a> <!--changed this from shop to gallery-->
-                <a href="#faq">FAQ</a>
-                <a href="#contact">CONTACT</a>
+        <ul> 
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li> 
+                <li><a href="#shop">GALLERY</a></li> 
+        </ul>
+         <ul><!--logo section-->
+        <a href="#" class="logo">Afri<span>Luxe.</span></a>
+        </ul>
+        <ul>
+                <li><a href="#testimonials">TESTIMONIALS</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+        </ul>
     </nav>
 
     <div class="hamburger" id="hamburger"><!--hamburger menu-->
-        <a href="#" class="fas fa-shopping-cart"></a>
-        <a href="#" class="fas fa-search" id="search5"></a>
-        <a href="#" class="fas fa-bars" id="menu btn"></a>
+        <a href="#" class="fas fa-bars" id="menu-btn" aria-label="Toggle menu"></a>
     </div>      
 
 </header>   
@@ -66,26 +64,7 @@
 <!--about section end-->
 
 
-<section class="categories" id="categories"><!--categories section-->
-    <h2 class="heading">Our Collections</h2>
-    <p>Explore our curated collections that showcase the beauty and diversity of African fashion. Each piece is a testament to the artistry and craftsmanship of African designers.</p>
-
-    <div class="box-container-one"><!--box container-->
-        <div class="box1"><!--box 1-->
-            <img src="images/amani.jpg" alt="Traditional Attire" class="amani">
-        </div>
-        <div class="box2"><!--box 2-->
-            <img src="images/maa.woman.jpg" alt=" Jewelry" class="maa">
-        </div>
-    </div>
-    <div class="box 3"><!--box 3, to be styled later-->
-            <img src="" alt="Kiondos">
-            <p>These amazing pieces are made from the finest materials, showcasing the beauty of African craftsmanship. Each piece tells a story, reflecting the rich culture and heritage of Africa.</p>
-            </p>
-        </div>
-</section><!--categories section end-->
-
-<section class="testimonials" id="testimonials"><!--testimonials section-->
+<section class="testimonials" id="testimonials"><!--testimonials section starts here-->
     <h2 class="heading">Testimonials</h2>
 
     <div class="box-container-two"><!--parent container-->
@@ -140,27 +119,32 @@
     <p>Explore our curated collections that showcase the beauty and diversity of African fashion. Each piece is a testament to the artistry and craftsmanship of African designers.</p>
 
     <div class="jewerlybox"> <!--box container, to add images in this div-->
-        <img src="images/jewerly1.jpg" alt="jewerly1" class="jewerly1">
-        <img src="images/jewerly2.jpg" alt="jewerly2" class="jewerly2">
-        <img src="images/jewerly3.jpg" alt="jewerly3" class="jewerly3">
-        <img src="images/jewerly4.jpg" alt="jewerly4" class="jewerly4">
-        <img src="images/jewerly5.jpg" alt="jewerly5" class="jewerly5">
-        <img src="images/jewerly6.jpg" alt="jewerly6" class="jewerly6">
+        <ul>
+            <li>    
+                <img src="images/jewerly1.jpg" alt="jewerly1" class="jewerly1">
+                <img src="images/jewerly2.jpg" alt="jewerly2" class="jewerly2">
+                <img src="images/jewerly3.jpg" alt="jewerly3" class="jewerly3">
+                <img src="images/jewerly4.jpg" alt="jewerly4" class="jewerly4">
+                <img src="images/jewerly5.jpg" alt="jewerly5" class="jewerly5">
+                <img src="images/jewerly6.jpg" alt="jewerly6" class="jewerly6">
+            </li>
+        </ul>
     </div>
 </section><!--shop section end-->
 
 
  
 <div class="faq" id="faq"><!--faq section-->
+
     <div class="content"><!--faq content-->
         <h1>Frequently Asked Questions</h1>
         <p>Check out our FAQ section for more information about our products, shipping, and more.</p>
-        <img src="images/customer.jpg" alt="FAQ" class="faq-image">
+        <img src="images/customerdesk.jpg" alt="FAQ" class="faq-image">
     </div>
 
     <div class="container"><!--box container-->
         <div class="accordion-item"><!--box 1-->
-            <button id="accordion-item-1" aria-expanded="false">
+            <button id="accordion-item" aria-expanded="false">
                 <span class="accordion-title">What is Afriluxe?</span>
                 <span class="accordion-icon" aria-hidden="true"></span>
             </button>
@@ -168,7 +152,7 @@
                 <p>Afriluxe is a luxury African fashion brand that celebrates the rich heritage and artistry of Africa through exquisite clothing and accessories.</p>
         </div>
         <div class="accordion-item"><!--box 2-->
-            <button id="accordion-item-2" aria-expanded="false">
+            <button id="accordion-item" aria-expanded="false">
                 <span class="accordion-title">Where are we located?</span>
                 <i class="fa-solid fa-plus" aria-hidden="true" ></i><!--USED FONTAWESOME ICON-->
             </button>
@@ -176,7 +160,7 @@
                 <p>Afriluxe is a luxury African fashion brand that celebrates the rich heritage and artistry of Africa through exquisite clothing and accessories.</p>
         </div>
         <div class="accordion-item"><!--box 3-->
-            <button id="accordion-item-3" aria-expanded="false">
+            <button id="accordion-item" aria-expanded="false">
                 <span class="accordion-title">What do we do?</span>
                 <span class="accordion-icon" aria-hidden="true"></span>
             </button>
@@ -184,7 +168,7 @@
                 <p>Afriluxe is a luxury African fashion brand that celebrates the rich heritage and artistry of Africa through exquisite clothing and accessories.</p>
         </div>
         <div class="accordion-item"><!--box 4-->
-            <button id="accordion-item-4" aria-expanded="false">
+            <button id="accordion-item" aria-expanded="false">
                 <span class="accordion-title">Why us?</span>
                 <span class="accordion-icon" aria-hidden="true"></span>
             </button>
@@ -192,7 +176,7 @@
                 <p>Afriluxe is a luxury African fashion brand that celebrates the rich heritage and artistry of Africa through exquisite clothing and accessories.</p>
         </div>
         <div class="accordion-item"><!--box 5-->
-            <button id="accordion-item-5" aria-expanded="false">
+            <button id="accordion-item" aria-expanded="false">
                 <span class="accordion-title">shipping ?</span>
                 <span class="accordion-icon" aria-hidden="true"></span>
             </button>

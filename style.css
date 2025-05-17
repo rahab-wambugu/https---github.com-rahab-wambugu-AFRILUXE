@@ -1,6 +1,6 @@
 :root{
-    --main-color: hsl(0, 24%, 36%);
-    --second-color: #c46868;
+    --main-color: #bd8a6f;
+    --second-color: #f4c542  ;
     --third-color: black;
     /*to add button, heading colours etc*/
 
@@ -13,7 +13,6 @@
     outline: none;
     border: none;
     text-decoration: none;
-    text-transform: capitalize;
     transition: 0.2s linear;
 }
 
@@ -29,7 +28,6 @@ header{
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
     background-color: var(--main-color);
     padding: 2rem 9%;
     display: flex;
@@ -39,24 +37,38 @@ header{
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
 }
 header .logo{
-    font-size: 3rem;
-    color: var(--third-color);
-    font-weight: 600;
+    font-size: 2.0rem;
+    color: white;
+    font-weight: 700;
     letter-spacing: 1px;
+    padding: 1rem;
 }
 header .logo span{
     color: var(--second-color);
 }
-header .logo span:nth-child(2){
-    color: var(--fourth-color);
-}   
-header .navbar a{
-    color: var(---color);
-    font-size: 1.5rem;
-    font-weight: 510;
-    padding: 0 1.0rem;
-    display: inline-block;
+
+header .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 1rem 2rem; 
 }
+header .navbar li{
+    margin: 0 1.5rem;
+    display: inline-block;
+    list-style: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    gap: 1rem;
+    color: var(--third-color);
+}
+header .navbar li a{
+    color: var(--third-color);
+    padding: 2rem;;
+}
+
 header .navbar a:hover{
     color: var(--second-color);
     border-bottom: 1px solid var(--second-color);
@@ -67,6 +79,7 @@ header .hamburger a{
     margin-left: 1.0rem;
     padding: 0 1.5rem;
     border-radius: 50%;
+    cursor: pointer;
 }
 header .hamburger .a:hover{
     background-color: var(--second-color);
@@ -75,8 +88,13 @@ header .hamburger .a:hover{
 
 .home{/* home page */
     display: flex;
-    background-image: url(/images/africanwoman.png);/*to change bg img*/
+    background-image: url(/images/patternbg.jpg);/*to change bg img*/
     background-repeat: cover;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
     padding: 1rem 9%;
     justify-content: center;
     align-items: center;
@@ -103,19 +121,20 @@ header .hamburger .a:hover{
     color: var(--third-color);
 }
 .home .content p{
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 1.7rem;
+    font-weight: 600;
     color: black;
-    margin-bottom: 5px;
+    margin-top: 30px;
 }
 .home .content .btn{
     background-color: var(--main-color);
-    color: white;
+    color: var(--third-color);
     padding: 1.5rem 3rem;
     border-radius: 5rem;
     font-size: 1.7rem;
+    font-weight: 600;
     cursor: pointer;
-    margin-top: 5px;
+    margin-top: 50px;
 }
 section{
     padding: 1rem 9%;
@@ -142,13 +161,16 @@ section{
  }
  
  .about.content h1{
-     font-size: 4.0rem;
-     color: black; /* to check h1 and h3 on about page; */
+     font-size: 3.0rem;
+     color: var(--third-color); /* to check h1 and h3 on about page; */
+     text-align: center;
  }
  .about .content h3{
-     font-size: 2.5rem;
+     font-size: 2.0rem;
      color: var(--third-color);
      margin-bottom: 2rem;
+     text-align: left;
+
  }    
  .about .content p{
      font-size: 1.5rem;
@@ -186,74 +208,7 @@ section{
      color: white;
      box-shadow: 0 0 1rem rgba(0,0,0,.2);
  }
- .categories{/* categories page */
-     justify-content: space-between;
-     margin-top: 2rem;
-     margin-bottom: 2rem;
-     background-color: var(--main-color);  
- }
- .categories .h2{
-     font-size: 2.0rem;
-     color: var(--third-color);
-     margin-bottom: 2rem;
-    text-align: center;
- }
- .categories p{
-     font-size: 1.5rem;
-     color: var(--third-color);
-     margin-bottom: 2rem;
-     align-content: center;
- }
- .categories .box-container-one{
-     display: flex;
-     flex-direction: row;
-     justify-content: space-evenly;
-     align-items: center;
-     margin-top: 2rem;
-     margin-bottom: 2rem;
- }
- .categories .box-container-one .box1{
-    background-color: url(../images/afrihome.jpg) no-repeat center center/cover;
-     height: 50vh;
-     width: 50%;
-     padding: 2rem;
-     border-radius: 1rem;
-     box-shadow: 0 0 1rem rgba(0,0,0,.2);
-     text-align: center;
-     margin-bottom: 2rem;
-     flex-basis: 30%;
- }
-.categories .box-container-one .box1:hover{
-        background-color: var(--second-color);
-        color: white;
-        box-shadow: 0 0 1rem rgba(0,0,0,.2);
-    }
-.categories .box-container-one .box1 .amani{
-   width: 40vh;
-   max-height: 40vh;
-    border-radius: 1rem;
-}
-.categories .box-container-one .box2{
-        background-color: url(../images/afrihome.jpg) no-repeat center center/cover;
-        height: 50vh;
-        width: 50%;
-        padding: 2rem;
-        border-radius: 1rem;
-        box-shadow: 0 0 1rem rgba(0,0,0,.2);
-        text-align: center;
-        margin-bottom: 2rem;
-        flex-basis: 30%;
-}
-.categories .box-container-one .box2:hover{
-    background-color: var(--second-color);
-    color: white;
-    box-shadow: 0 0 1rem rgba(0,0,0,.2);
-}
-.categories .box-container-one .box2 .maa{
-    width: 40vh;
-    max-height: 40vh;
-     border-radius: 1rem;
- }
+
 /*testimonial page*/
  .testimonials{
     background-color: white;
@@ -275,7 +230,7 @@ section{
     grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
 }
 .testimonials .box-container-two div{
-    background-color: var(--second-color);
+    background-color: var(--main-color);
     padding: 20px 0;
     font-size: 20px;
     border-radius: 1rem;
@@ -328,32 +283,41 @@ section{
     margin-bottom: 50px;
 }
 
-.shop .h2{
-    font-size: 3.0rem;
+.shop h2{
+    font-size: 2.5rem;
     font-weight: 600; /* to check h1 and h3 on shop page; */
     color: var(--third-color);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     text-align: center;
+
 }
-.shop .p{
-    font-size: 2.5rem;
+.shop p{
+    font-size: 1.5rem;
     font-weight: 500;
     color: var(--third-color);/* to check p on shop page; */
     margin-bottom: 2rem;
-    text-align: center;
+    text-align: left;
+    padding: 1rem;
 }
 .shop .jewerlybox{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-evenly;
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+.shop .jewerlybox .ul{
+    list-style: none;
+    padding: 1rem 2rem; 
+}
+.shop .jewerlybox .ul li{
+display: inline-block;
+
+}
 .shop .jewerly1{
 
-    height: 50vh;
-    width: 50%;
+    height: 60vh;
+    width: 45%;
     padding: 2px;
     border-radius: 2px;
     box-shadow: none;
@@ -361,8 +325,8 @@ section{
     flex-basis: 30%;
 }
 .shop .jewerly2{
-    height: 50vh;
-    width: 50%;
+    height: 60vh;
+    width: 45%;
     padding: 2px;
     border-radius: 2px;
     box-shadow: none;
@@ -371,7 +335,7 @@ section{
 }
 .shop .jewerly3{
     height: 50vh;
-    width: 50%;
+    width: 45%;
     padding: 2px;
     border-radius: 2px;
     box-shadow: none;
@@ -380,7 +344,7 @@ section{
 }
 .shop .jewerly4{
     height: 50vh;
-    width: 50%;
+    width: 45%;
     padding: 2px;
     border-radius: 2px;
     box-shadow: none;
@@ -389,7 +353,7 @@ section{
 }
 .shop .jewerly5{
     height: 50vh;
-    width: 50%;
+    width: 45%;
     padding: 2px;
     border-radius: 2px;
     box-shadow: none;
@@ -398,7 +362,7 @@ section{
 }
 .shop .jewerly6{
     height: 50vh;
-    width: 50%;
+    width: 45%;
     padding: 2px;
     border-radius: 2px;
     box-shadow: none;
@@ -427,13 +391,14 @@ section{
     color: var(--third-color);
     text-align: center;
     margin-bottom: 2rem;
+    margin-right: 10px;
 }
 .faq p{
     font-size: 1.5rem;
     font-weight: 500;
     color: var(--third-color);
     text-align: center;
-    margin-right: 5px;
+    padding: 5px;
     margin-bottom: 2rem;
 }
 .faq .container{
@@ -446,7 +411,7 @@ section{
     width: 50rem;
 }
 .faq  .accordion .accordion-item{
-    border-bottom: 1px solid var(--second-color);
+    border-bottom: 1px solid var(--second-color);/* grab coffee to style faq */
 }
 .faq  .accordion .accordion-item button[aria-expanded="true"]{
     border-bottom: 1px solid var(--second-color);
@@ -494,39 +459,45 @@ padding: 1rem 1.5rem 1rem 0;
 
 /* media queries */
 
-@media (max-width: 768px){
-    :root{
-        font-size: 40%;
-    }
-}
-
 @media (max-width: 390px){
     :root{
         font-size: 30%;
     }
+    header{
+        padding: 1rem 2%;
+        
+    }
     header .logo{
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        padding: 0.5rem;
     }
-    header .navbar a{
-        font-size: 0.8rem;
+    header .navbar li{
+        font-size: 3px;
+        font-weight: 500;
+        margin: 0 0.5rem; 
+        gap: 0.5rem;
+        padding: 0.3rem;
+    
     }
-    header .icon a{
+    header .hamburger a{
         font-size: 1.0rem;
     }
-    .afrihome .content h1{
+    .home{
+        padding: 1rem 2%;
+    }
+    .home .content h1{
         font-size: 3.5rem;
     }
-    .afrihome .content p{
+    .home .content p{
         font-size: 1.8rem;
     }
-    .afrihome .content .btn{
+    .home .content .btn{
         font-size: 1.8rem;
     }
-    .afrihome .image-moraa img{
-        width: 50%;
-        height: 40vh;
-    }
+   
     .testimonials .p{
         font-size: 0.5rem;
     }
 }
+
