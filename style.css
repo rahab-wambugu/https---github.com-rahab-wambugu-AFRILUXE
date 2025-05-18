@@ -21,6 +21,7 @@ html{
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
     overflow-x: hidden;
+    min-width: 100vh;
 }
 header{
     position: fixed;
@@ -28,13 +29,9 @@ header{
     top: 0;
     left: 0;
     right: 0;
+    height: 50px;
     background-color: var(--main-color);
-    padding: 2rem 9%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    
 }
 header .logo{
     font-size: 2.0rem;
@@ -47,44 +44,72 @@ header .logo span{
     color: var(--second-color);
 }
 
-header .navbar {
-    display: flex;
+header .navbar .sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    backdrop-filter: blur(50px);
+    box-shadow: -10px 0 10px rgba(0,0,0,.1);
+    display: none;/*to update no flex*/
+    list-style: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2rem 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 2rem;
+    background: var(--main-color);
+    text-decoration: none;
+}
+header .navbar .sidebar li{
+    width: 100%;
+    margin: 5px 0;
+}
+header .navbar .sidebar li a{
+    width: 100%;
+    color: var(--third-color);
+    padding: 2rem 0;
+}
+
+header .navbar .mainbar li{
+    margin: 5px 1.5rem;
+    display: inline-block;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    padding: 1rem 2rem; 
-}
-header .navbar li{
-    margin: 0 1.5rem;
-    display: inline-block;
-    list-style: none;
     font-size: 1.3rem;
     font-weight: 600;
-    gap: 1rem;
+    padding: 5px 1%;
+    gap: 5px;
+    height: 100%;
     color: var(--third-color);
 }
-header .navbar li a{
+header .navbar .mainbar li a{
     color: var(--third-color);
-    padding: 2rem;;
+    padding: 1rem;
 }
-
 header .navbar a:hover{
     color: var(--second-color);
     border-bottom: 1px solid var(--second-color);
 }
-header .hamburger a{
-    font-size: 2.0rem;
-    color: var(--third-color);
-    margin-left: 1.0rem;
-    padding: 0 1.5rem;
-    border-radius: 50%;
+header .close-btn{
+   height: 10px;
+}
+header .navbar .hamburger{ 
+    font-size: 2rem;
+    font-weight: 600;
+    display: none;
     cursor: pointer;
+    font-size: 2.5rem;
+    color: var(--third-color);
+    padding: 1rem;
 }
-header .hamburger .a:hover{
-    background-color: var(--second-color);
-    color: white;
-}
+
 
 .home{/* home page */
     display: flex;
