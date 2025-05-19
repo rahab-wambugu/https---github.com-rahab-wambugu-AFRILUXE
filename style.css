@@ -22,6 +22,7 @@ html{
     scroll-padding-top: 6rem;
     overflow-x: hidden;
     min-width: 100vh;
+    padding: 2rem 9%;
 }
 header{
     position: fixed;
@@ -35,7 +36,7 @@ header{
 }
 header .logo{
     font-size: 2.0rem;
-    color: white;
+    color: var(--third-color);
     font-weight: 700;
     letter-spacing: 1px;
     padding: 1rem;
@@ -96,9 +97,6 @@ header .navbar .mainbar li a{
 header .navbar a:hover{
     color: var(--second-color);
     border-bottom: 1px solid var(--second-color);
-}
-header .close-btn{
-   height: 10px;
 }
 header .navbar .hamburger{ 
     font-size: 2rem;
@@ -399,11 +397,12 @@ display: inline-block;
 
 .faq{/* faq page  */
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 0 auto;
     display: flex;
-    min-height: 100vh;
-
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 1200px;
 }
 .faq-image{
     background-image: url(../images/faq.jpg);
@@ -420,66 +419,264 @@ display: inline-block;
     margin-bottom: 2rem;
     margin-right: 10px;
 }
-.faq p{
+.faq  .content p{
     font-size: 1.5rem;
     font-weight: 500;
     color: var(--third-color);
     text-align: center;
     padding: 5px;
     margin-bottom: 2rem;
+    width: 100%;
 }
 .faq .container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     margin: 0;
-    padding: 4rem;
-    width: 50rem;
-}
-.faq  .accordion .accordion-item{
-    border-bottom: 1px solid var(--second-color);/* grab coffee to style faq */
-}
-.faq  .accordion .accordion-item button[aria-expanded="true"]{
-    border-bottom: 1px solid var(--second-color);
-}
-.faq .accordion .accordion-item button{
-    position: relative;
-    display: block;
-    text-align: left;
-    width: 100%;
-    padding: 2rem;
-    font-size: 2.0rem;
-    font-weight: 500;   
-    border: none;
-    outline: none;
-}
-.faq .accordion .accordion-item button:hover, .faq .accordion .accordion-item button:focus{
-    background-color: var(--second-color);
-    color: white;
-    cursor: pointer;
-}
-.faq .accordion .accordion-item button:hover::after, .faq .accordion .accordion-item button:focus::after{
-    cursor: pointer;
-    color: var(--main-color);
-    border-radius: 1px solid var(--third-color);
-}
-.faq .accordion button .accordion-title{
-padding: 1rem 1.5rem 1rem 0;
-}
-.accordion button .icon{
-    display: inblock;
-    position: absolute;
-    right: 1rem;
-    top: 18px;
-    width: 20px;
-    height: 20px;
-    border: 1px solid var(--third-color);
-    border-radius: 50%;
+    padding: 0rem; /*to check height of the container*/
+    gap: 1.5rem;
+    width: 50%;
+    margin-top: 50px;
 
-    transform: translateY(-50%);
+}
+.faq .accordion-title{
+    font-size: 15px;
+    font-weight: 500;
+}
+.faq .accordion-item{
+    border: 1px solid white;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    min-height: 100px;
+    border-radius: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,.1);
+    margin-bottom: 1rem;
+    background-color: white;
+    transition: box-shadow 0.3s ease;
+}
+.faq .accordion-item:hover{
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background-color: var(--main-color);
+}
+.faq .accordion-button{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      color: var(--third-color);  
+      background: none;
+      border: none;
+      font-size: 1rem;
+      font-weight: 500;
+      text-align: left;
+      cursor: pointer;
+}
+.faq .accordion-content{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    will-change: max-height;
+
+}
+.faq .accordion-content p{
+    padding-bottom: 20px;
+    font-size: 14px;   
+    color: var(--third-color);   
+}
+.contact{
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    border: 0;
+}
+.contact p{
+    font-size: 15px;
+    text-align: center;
+}
+.contact .container{
+    min-height: 70vh;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    border: 1px solid white;
+    width: 100%;
+    box-shadow: 0 2px 6px rgba(0,0,0,.1);
+    margin-top: 2rem;
+    background-color: white;
+    font-size: 1.25rem;
+    border-radius: 5px;
+}
+.contact .contactInfo{
+    width: 50%;
+    box-sizing: border-box;
+    border: none;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    text-align: center;
+}
+.contact .socials{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-size: 20px;
+}
+.contact .contactInfo p{
+    margin-top: 30px;/*to place it at bottom of the container*/
+}
+.contact .contactForm{
+    width: 50%;
+    box-sizing: border-box;
+    border: none;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+.contact .contactForm h2{
+    text-align: center;
+}
+.contact .contactForm .input{
+    min-height: 40vh;
+    box-sizing: border-box;
+    border: none;
+    width: 100%;
+    margin-top: 2rem;
+    background-color: var(--main-color);
+    font-size: 1.25rem;
+    border-radius: 20px;
+    padding: 2rem;
+}
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 15px;
+}
+.contactForm .inputBox input, .contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0px;
+    font-size: 16px;
+    margin: 10px 0px;
+    border: none;
+    border-bottom: 1px solid var(--third-color);
+    outline: none;
+    resize: none;
+}
+.contactForm .inputBox input span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0px;
+    font-size: 20px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: var(--second-color);
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span{
+    color: var(--second-color);
+    font-size: 12px;
+    transform: translate(-20px);
+}
+.contactForm .inputBox input[type="submit"]{
+    width: 100%;
+    height: 7vh;
+    border-radius: 20px;
+    background: var(--second-color);
+    color: var(--third-color);
+    border: none;
+    cursor: pointer;
+    padding-bottom: 3px;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+}/*end of contact page*/
+
+.footer{
+    max-height: 30vh;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.footer .footer-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    height: 50vh;
+    box-sizing: border-box;
+    border: 1px solid white;
+    box-shadow: 0 2px 6px rgba(0,0,0,.1);
+    border: none;
+    margin-top: 2rem;
+    font-size: 1.25rem;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+}
+.footer-nav{
+    display: flex;
+    flex-direction: row;
+}
+.footer-nav ul{
+    list-style: none;
+    margin: 1.5rem;
+    padding: 1.5rem;
+    flex-direction: column;
+    font-size: 15px;
+    color: var(--third-color);
+}
+
+.footer .logo{
     font-size: 2.0rem;
     color: var(--third-color);
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 1rem;
+}
+.footer .logo span{
+    color: var(--second-color);
+}
+.footer .footer-copyright{
+    padding-top: 1rem;
+    margin-top: 3rem;
+    text-align: center;
+    font-size: px;
+    color: var(--main-color);
+
+}
+.footer .support{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    height: 50vh;
+    box-sizing: border-box;
+    border: 1px solid white;
+    box-shadow: 0 2px 6px rgba(0,0,0,.1);
+    border: none;
+    margin-top: 2rem;
+    font-size: 1.25rem;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+    background-color: bisque;
+    
+}
+.footer .support p{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
 }
 
 

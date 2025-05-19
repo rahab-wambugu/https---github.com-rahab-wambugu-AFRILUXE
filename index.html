@@ -7,7 +7,6 @@
 </head>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
-<link href="/your_path_to_version_6_files/css/all.css" rel="stylesheet" />
 <body>
 <header><!--header section-->
     <nav class="navbar"> <!--navigation bar-->
@@ -145,61 +144,140 @@
     </div>
 
     <div class="container"><!--box container-->
-        <div class="accordion-item"><!--box 1-->
-            <button id="accordion-item" aria-expanded="false">
+        <div class="accordion-item"><!--accordion1--> 
+            <button  onclick="toggleAccordion(1)" class="accordion-button" aria-expanded="false">
                 <span class="accordion-title">What is Afriluxe?</span>
-                <span class="accordion-icon" aria-hidden="true"></span>
+                <span id="icon-1"><i class="fa-solid fa-plus"></i></span>
             </button>
-            <div class="accordion-content">
+            <div class="accordion-content" id="content-1">
                 <p>Afriluxe is a luxury African fashion brand that celebrates the rich heritage and artistry of Africa through exquisite clothing and accessories.</p>
-        </div>
-        <div class="accordion-item"><!--box 2-->
-            <button id="accordion-item" aria-expanded="false">
-                <span class="accordion-title">Where are we located?</span>
-                <i class="fa-solid fa-plus" aria-hidden="true" ></i><!--USED FONTAWESOME ICON-->
+            </div>
+        </div>  
+         
+         <div class="accordion-item"><!--accordion2--> 
+            <button  onclick="toggleAccordion(2)" class="accordion-button" aria-expanded="false">
+                <span class="accordion-title">What is Afriluxe?</span>
+                <span id="icon-2"><i class="fa-solid fa-plus"></i></span>
             </button>
-            <div class="accordion-content">
+            <div class="accordion-content" id="content-2">
                 <p>Afriluxe is a luxury African fashion brand that celebrates the rich heritage and artistry of Africa through exquisite clothing and accessories.</p>
-        </div>
-        <div class="accordion-item"><!--box 3-->
-            <button id="accordion-item" aria-expanded="false">
-                <span class="accordion-title">What do we do?</span>
-                <span class="accordion-icon" aria-hidden="true"></span>
+            </div>
+        </div>  
+
+         <div class="accordion-item"><!--accordion3--> 
+            <button  onclick="toggleAccordion(3)" class="accordion-button" aria-expanded="false">
+                <span class="accordion-title">What is Afriluxe?</span>
+                <span id="icon-3"><i class="fa-solid fa-plus"></i></span>
             </button>
-            <div class="accordion-content">
+            <div class="accordion-content" id="content-3">
                 <p>Afriluxe is a luxury African fashion brand that celebrates the rich heritage and artistry of Africa through exquisite clothing and accessories.</p>
-        </div>
-        <div class="accordion-item"><!--box 4-->
-            <button id="accordion-item" aria-expanded="false">
-                <span class="accordion-title">Why us?</span>
-                <span class="accordion-icon" aria-hidden="true"></span>
+            </div>
+        </div>  
+
+         <div class="accordion-item"><!--accordion4--> 
+            <button  onclick="toggleAccordion(4)" class="accordion-button" aria-expanded="false">
+                <span class="accordion-title">What is Afriluxe?</span>
+                <span id="icon-4"><i class="fa-solid fa-plus"></i></span>
             </button>
-            <div class="accordion-content">
+            <div class="accordion-content" id="content-4">
                 <p>Afriluxe is a luxury African fashion brand that celebrates the rich heritage and artistry of Africa through exquisite clothing and accessories.</p>
-        </div>
-        <div class="accordion-item"><!--box 5-->
-            <button id="accordion-item" aria-expanded="false">
-                <span class="accordion-title">shipping ?</span>
-                <span class="accordion-icon" aria-hidden="true"></span>
+            </div>
+        </div>  
+
+        <div class="accordion-item"><!--accordion5--> 
+            <button  onclick="toggleAccordion(5)" class="accordion-button" aria-expanded="false">
+                <span class="accordion-title">What is Afriluxe?</span>
+                <span id="icon-5"><i class="fa-solid fa-plus"></i></span>
             </button>
-            <div class="accordion-content">
+            <div class="accordion-content" id="content-5">
                 <p>Afriluxe is a luxury African fashion brand that celebrates the rich heritage and artistry of Africa through exquisite clothing and accessories.</p>
+            </div>
         </div>  
     </div>
+
 </div><!--faq section end-->
 
+<div class="contact" id="contact">
+    <h1>We're delighted to bring to us amazing sets of african themed collections</h1>
+    <p>Afriluxe collections are designed with care and love.</p>
+    <div class="container">
+        <div class="contactInfo">
+            <h2>contact Details:</h2><br>
+           <p><strong> Email:</strong> wambugurahab53@gmail.com</p><br>
+           <p><strong>Phone:</strong>0702382524</p><br>
+           <p><strong>Address:</strong>28 Norw Building, Nairobi, 00100 KEN.</p><br><br>
+
+            <span>
+                <ul class="socials">
+                    <li><i class="fa-brands fa-github"></i></li>
+                    <li></li><i class="fa-brands fa-facebook"></i></li>
+                    <li></li><i class="fa-brands fa-linkedin"></i></li>
+                    <li></li><i class="fa-brands fa-whatsapp"></i></li>
+                </ul>
+            </span><br><br>
+            <p>We typically respond within 12 hours</p>
+        </div>
+
+        <div class="contactForm">
+              <form>
+                    <h2>Send Message</h2>
+                    
+                    <div class="input">
+                        <div class="inputBox">
+                            <input type="text" name="email" required="required">
+                            <span>Email</span>
+                        </div>
+                        <div class="inputBox">
+                            <textarea required="required"></textarea>
+                            <span>Type your message...</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="submit" name="" value="Send message">
+                        </div>
+                    </div>
+
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div  class="footer-container">
+        <a href="#"class="logo">Afri<span>Luxe.</span></a><!--logo section-->
+        <nav class="footer-nav">
+        <ul class="nav-links">
+             <li><a href="#home">HOME</a></li> <!--to style close btn-->
+             <li><a href="#about">ABOUT</a></li> 
+             <li><a href="#shop">GALLERY</a></li> 
+             <li><a href="#testimonials">TESTIMONIALS</a></li>
+             <li><a href="#faq">FAQ</a></li>
+             <li><a href="#contact">CONTACT</a></li>
+        </ul>
+        <ul class="socials">
+             <li><a href="instagram">INSTAGRAM</a></li>
+             <li><a href="#pinterest">PINTEREST</a></li>
+             <li><a href="#linkedin">LINKEDIN</a></li>
+        </ul>
+        <ul class="terms">
+             <li><a href="#tnc">Terms of Use</a></li>
+             <li><a href="#pp">Privacy Policy</a></li>
+        </ul>
+        </nav>
+
+        <p class="footer-copyright">&copy; 2025 Afriluxe. All rights reserved.</p>
+    </div>
+
+    <div class="support">
+        <p> Explore luxurious<br> african themed collections now </p>
+        <a href="#shop" class="btn">Explore Collection</a>
 
 
+    </div>
+</footer>
 
-<section class="contact" id="contact"><!--contact section-->
-    <h2 class="heading">Contact Us</h2>
-    <p>If you have any questions or inquiries, feel free to reach out to us. We're here to help!</p>
 
-    <div class="box-container-five"><!--box container-->
-        <div class="box1"><!--box 1-->
-            <h3>Get in Touch</h3>
-
-    
 <script src="index.js"></script>
 </body>
 </html>
