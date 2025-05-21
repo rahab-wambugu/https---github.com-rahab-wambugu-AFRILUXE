@@ -22,3 +22,25 @@ if (content.style.maxHeight && content.style.maxHeight !== '0px') {
       icon.innerHTML = minusI;
     }
 }
+
+const testimonials = document.querySelectorAll('.testimonial-box');
+  let currentIndex = 0;
+
+function showTestimonial(index) {
+    testimonials.forEach((testi, i) => {
+      testi.style.display = i === index ? 'block' : 'none';
+    });
+  }
+
+  document.getElementById('prevArrow').addEventListener('click', () => {
+    currentIndex = (currentIndex === 0) ? testimonials.length - 1 : currentIndex - 1;
+    showTestimonial(currentIndex);
+  });
+
+  document.getElementById('nextArrow').addEventListener('click', () => {
+    currentIndex = (currentIndex === testimonials.length - 1) ? 0 : currentIndex + 1;
+    showTestimonial(currentIndex);
+  });
+
+  showTestimonial(currentIndex);
+

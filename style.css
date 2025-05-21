@@ -24,14 +24,19 @@ html{
     min-width: 100vh;
     padding: 2rem 9%;
 }
+body{
+    color: var(--third-color);
+    
+}
 header{
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     right: 0;
-    height: 50px;
+    height: 70px;
     background-color: var(--main-color);
+    padding: 2rem 9%;
     
 }
 header .logo{
@@ -76,9 +81,9 @@ header .navbar .sidebar li a{
     padding: 2rem 0;
 }
 
-header .navbar .mainbar li{
+header .navbar .mainbar{
     margin: 5px 1.5rem;
-    display: inline-block;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -89,6 +94,10 @@ header .navbar .mainbar li{
     gap: 5px;
     height: 100%;
     color: var(--third-color);
+}
+header .navbar .mainbar li{
+    margin: 0;
+
 }
 header .navbar .mainbar li a{
     color: var(--third-color);
@@ -112,7 +121,7 @@ header .navbar .hamburger{
 .home{/* home page */
     display: flex;
     background-image: url(/images/patternbg.jpg);/*to change bg img*/
-    background-repeat: cover;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -121,8 +130,7 @@ header .navbar .hamburger{
     padding: 1rem 9%;
     justify-content: center;
     align-items: center;
-    margin-top: 2px;
-    margin-bottom: 2px;
+    margin: 2px 0;
     min-height: 100vh;
 }
 .home .container{
@@ -134,7 +142,7 @@ header .navbar .hamburger{
     padding: 1px;
     border-radius: 20px;
     height: 75vh;
-    width: 220vh;
+    width: 80vw;
 }
 .home .content{
     max-width: 60%;
@@ -160,14 +168,9 @@ header .navbar .hamburger{
     margin-top: 50px;
 }
 section{
-    padding: 1rem 9%;
+    padding: 2rem 9%;
  }
- h1{
-     font-size: 2.0rem;
-     color: var(--third-color);
-     text-align: center;
-     margin-bottom: 2rem;
- }
+
  .about{/* about page */
      display: flex;
      flex-direction: row;
@@ -183,13 +186,14 @@ section{
      max-width: 50rem;
  }
  
- .about.content h1{
-     font-size: 3.0rem;
+ .about .content h1{
+     font-size: 2.0rem;
      color: var(--third-color); /* to check h1 and h3 on about page; */
-     text-align: center;
+     text-align: left;
+     margin-bottom: 2rem;
  }
  .about .content h3{
-     font-size: 2.0rem;
+     font-size: 1.5rem;
      color: var(--third-color);
      margin-bottom: 2rem;
      text-align: left;
@@ -200,19 +204,23 @@ section{
      color: var(--third-color);
      margin-bottom: 2rem;
  }
- .image-moraa img{
-     width: 140%;
-     height: 90vh;
-     border-radius: 10%;
-     box-shadow: 0 0 1rem rgba(0,0,0,.2);
+ .image-moraa{
      margin-top: 5rem;
      margin-bottom: 2rem;
-     justify-content: flex-end;
-     align-items: first baseline;
      display: flex;
+     justify-content: flex-end;
+     align-items: baseline;
      flex-direction: column;
      background-attachment: fixed;
      background-size: cover;
+ }
+ .image-moraa img{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10%;
+    box-shadow: 0 0 1rem rgba(0,0,0,.2);
+    object-fit: cover;
  }
  .btn{
      display: inline-block;
@@ -238,7 +246,11 @@ section{
     background-color: white;
     padding: 2rem 9%; 
  }
- .testimonials h2{
+ h1{
+    font-size: 12px;
+    text-align: left;
+ }
+.testomonial h2{
     font-size: 1.5rem;
     color: var(--third-color);
  }
@@ -246,22 +258,24 @@ section{
  .testimonials .box-container-two{
     display: grid;
     justify-content: space-evenly;
-    height: 300px;
-    gap: 10px;
+    gap: 1;
     padding: 10px;
-    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 .testimonials .box-container-two div{
     background-color: var(--main-color);
-    padding: 20px 0;
+    padding: 20px 1rem;
     font-size: 20px;
     border-radius: 1rem;
     box-shadow: 0 0 1rem rgba(0,0,0,.2);
     text-align: center;
     margin-bottom: 2rem;
 }
+.testimonial-box {
+  display: none;
+}
+
 .testimonials .box-container-two .box1{
     background-color: white;
     box-shadow: none;
@@ -269,16 +283,20 @@ section{
 .testimonials .box-container-two .box4{
     grid-column: span 3;
     background-color: white;
-    margin-bottom: 2rem;
     border-radius: 40px;
 }
-.testimonials .fa-arrow-right{
+.testimonials .fa-arrow-right, .testimonials .fa-arrow-left{
     font-size: 2rem;
     transition: transform 0.2s;
     color: var(--third-color);
-    margin-left: 1rem;
-    margin-bottom: 1rem;
+    margin: 0 1rem 1rem 0;
 } /* to make the arrows responsive5 */
+
+.testimonials .fa-arrow-right:hover,
+.testimonials .fa-arrow-left:hover {
+  transform: scale(1.2);
+  color: var(--main-color);
+}
 .testimonials .i:hover{
     transform: scale(1.2);
     color: var(--main-color);
@@ -287,11 +305,11 @@ section{
     box-shadow: none;
     color: yellow;
     font-size: 2rem;
-    margin-left: 1rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
+    
 }
 .testimonials .stars:hover{
-    color: var(--second-color);
+    color: var(--main-color);
 }
 .testimonials .brands{
     font-size: 3rem;
@@ -304,7 +322,7 @@ section{
 }
 
 .shop{/* shop page  */
-    margin-top: 50vh;
+    margin-top: 5px;
     margin-bottom: 50px;
 }
 
@@ -324,80 +342,35 @@ section{
     text-align: left;
     padding: 1rem;
 }
-.shop .jewerlybox{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-.shop .jewerlybox .ul{
-    list-style: none;
-    padding: 1rem 2rem; 
-}
-.shop .jewerlybox .ul li{
-display: inline-block;
 
+.shop .jewerlybox ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1rem;
 }
-.shop .jewerly1{
 
-    height: 60vh;
-    width: 45%;
-    padding: 2px;
-    border-radius: 2px;
-    box-shadow: none;
-    margin-bottom: 10px;
-    flex-basis: 30%;
+.shop .jewerlybox ul li {
+  flex: 1 1 calc(33% - 1rem);
+  max-width: calc(33% - 1rem);
+  border-radius: 8px;
+  overflow: hidden;
 }
-.shop .jewerly2{
-    height: 60vh;
-    width: 45%;
-    padding: 2px;
-    border-radius: 2px;
-    box-shadow: none;
-    margin-bottom: 10px;
-    flex-basis: 30%;
-}
-.shop .jewerly3{
-    height: 50vh;
-    width: 45%;
-    padding: 2px;
-    border-radius: 2px;
-    box-shadow: none;
-    margin-bottom: 10px;
-    flex-basis: 30%;
-}
-.shop .jewerly4{
-    height: 50vh;
-    width: 45%;
-    padding: 2px;
-    border-radius: 2px;
-    box-shadow: none;
-    margin-bottom: 10px;
-    flex-basis: 30%;
-}
-.shop .jewerly5{
-    height: 50vh;
-    width: 45%;
-    padding: 2px;
-    border-radius: 2px;
-    box-shadow: none;
-    margin-bottom: 10px;
-    flex-basis: 30%;
-}
-.shop .jewerly6{
-    height: 50vh;
-    width: 45%;
-    padding: 2px;
-    border-radius: 2px;
-    box-shadow: none;
-    margin-bottom: 10px;
-    flex-basis: 30%;
+
+.shop .jewerlybox ul li img.jewerly {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
 .faq{/* faq page  */
     box-sizing: border-box;
-    margin: 0 auto;
+    margin: 5rem 5rem;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -418,6 +391,11 @@ display: inline-block;
     text-align: center;
     margin-bottom: 2rem;
     margin-right: 10px;
+}
+.faq h2{
+    font-size: 13px;
+    text-align: left;
+    margin-bottom: 1rem;
 }
 .faq  .content p{
     font-size: 1.5rem;
@@ -490,10 +468,27 @@ display: inline-block;
     width: 100%;
     margin: 0;
     border: 0;
+    
+}
+.contact h2{
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.contact h1{
+    font-size: 10px;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+.contact h3{
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 2rem;
 }
 .contact p{
     font-size: 15px;
     text-align: center;
+    margin-bottom: 2rem;
 }
 .contact .container{
     min-height: 70vh;
@@ -526,6 +521,7 @@ display: inline-block;
     font-size: 20px;
 }
 .contact .contactInfo p{
+    text-align: left;
     margin-top: 30px;/*to place it at bottom of the container*/
 }
 .contact .contactForm{
@@ -600,17 +596,17 @@ display: inline-block;
 }/*end of contact page*/
 
 .footer{
-    max-height: 30vh;
+    max-height: 70vh;
     display: flex;
     flex-direction: row;
     gap: 30px;
+    margin: 4.5rem 0 1.5rem 0;
 }
 .footer .footer-container{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
     width: 50%;
     height: 50vh;
@@ -618,7 +614,6 @@ display: inline-block;
     border: 1px solid white;
     box-shadow: 0 2px 6px rgba(0,0,0,.1);
     border: none;
-    margin-top: 2rem;
     font-size: 1.25rem;
     border-radius: 20px;
     margin-bottom: 1.5rem;
@@ -633,7 +628,16 @@ display: inline-block;
     padding: 1.5rem;
     flex-direction: column;
     font-size: 15px;
-    color: var(--third-color);
+}
+.footer-nav ul li a{
+     color: var(--third-color);
+     display: flex;
+     justify-content: flex-start;
+     align-items: flex-start;
+     margin-bottom: 5px;
+}
+.footer-nav ul li a:hover{
+    color: var(--main-color);
 }
 
 .footer .logo{
@@ -642,6 +646,7 @@ display: inline-block;
     font-weight: 700;
     letter-spacing: 1px;
     padding: 1rem;
+    margin-top: 5px;
 }
 .footer .logo span{
     color: var(--second-color);
@@ -652,6 +657,7 @@ display: inline-block;
     text-align: center;
     font-size: px;
     color: var(--main-color);
+    
 
 }
 .footer .support{
@@ -666,7 +672,6 @@ display: inline-block;
     border: 1px solid white;
     box-shadow: 0 2px 6px rgba(0,0,0,.1);
     border: none;
-    margin-top: 2rem;
     font-size: 1.25rem;
     border-radius: 20px;
     margin-bottom: 1.5rem;
@@ -682,46 +687,245 @@ display: inline-block;
 
 
 /* media queries */
-
-@media (max-width: 390px){
-    :root{
-        font-size: 30%;
-    }
-    header{
-        padding: 1rem 2%;
-        
-    }
-    header .logo{
-        font-size: 1.2rem;
-        font-weight: 600;
-        padding: 0.5rem;
-    }
-    header .navbar li{
-        font-size: 3px;
-        font-weight: 500;
-        margin: 0 0.5rem; 
-        gap: 0.5rem;
-        padding: 0.3rem;
-    
-    }
-    header .hamburger a{
-        font-size: 1.0rem;
-    }
-    .home{
-        padding: 1rem 2%;
-    }
-    .home .content h1{
-        font-size: 3.5rem;
-    }
-    .home .content p{
-        font-size: 1.8rem;
-    }
-    .home .content .btn{
-        font-size: 1.8rem;
-    }
-   
-    .testimonials .p{
-        font-size: 0.5rem;
-    }
+/* Medium devices - tablets and small desktops */
+@media (max-width: 1024px) {
+  /* Header adjustments */
+  header {
+    padding: 1rem 4%;
+  }
+  header .logo {
+    font-size: 1.8rem;
+    padding: 0.75rem 0;
+  }
+  header .navbar .mainbar {
+    gap: 10px;
+  }
+  header .navbar .mainbar li a {
+    padding: 0.8rem 1rem;
+    font-size: 1.1rem;
+  }
+  header .navbar .hamburger {
+    display: block; /* show hamburger for medium screens */
+  }
+  header .navbar .sidebar {
+    width: 220px;
+    padding: 1.5rem 1rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Home Section */
+  .home .container {
+    max-width: 90vw;
+    flex-direction: column;
+    height: auto;
+  }
+  .home .content {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  /* About Section */
+  .about {
+    flex-direction: column;
+    padding: 2rem 4%;
+    min-height: auto;
+  }
+  .about .content {
+    max-width: 100%;
+    text-align: center;
+  }
+  .image-moraa {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .image-moraa img {
+    max-width: 90%;
+    border-radius: 20px;
+  }
+  
+  /* Testimonials */
+  .testimonials .box-container-two {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    padding: 0 1rem;
+  }
+  
+  /* Shop Section */
+  .shop .jewerlybox ul li {
+    flex: 1 1 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
+  
+  /* FAQ Section */
+  .faq {
+    flex-direction: column;
+    margin: 3rem 1rem;
+  }
+  .faq .container {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .faq .faq-image {
+    display: none; /* hide large image on medium */
+  }
+  
+  /* Contact */
+  .contact .container {
+    flex-direction: column;
+    min-height: auto;
+  }
+  .contact .contactInfo,
+  .contact .contactForm {
+    width: 100%;
+    margin: 1rem 0;
+  }
+  
+  /* Footer */
+  .footer {
+    flex-direction: column;
+    gap: 20px;
+    max-height: auto;
+    margin: 3rem 2rem 1rem 2rem;
+  }
+  .footer .footer-container,
+  .footer .support {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 2rem;
+  }
+  .footer-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-nav ul {
+    margin: 1rem 0;
+    padding: 0;
+    text-align: center;
+  }
+  .footer-nav ul li a {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
 }
 
+/* Small devices - mobile phones */
+@media (max-width: 640px) {
+  html {
+    font-size: 50%; /* slightly smaller base font size */
+  }
+  header {
+    padding: 1rem 2%;
+    height: 60px;
+  }
+  header .logo {
+    font-size: 1.4rem;
+    padding: 0.5rem 0;
+  }
+  header .navbar .mainbar li a {
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+  }
+  header .navbar .hamburger {
+    display: block;
+  }
+  
+  /* Sidebar menu width for phones */
+  header .navbar .sidebar {
+    width: 200px;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  
+  /* Home Section */
+  .home .container {
+    flex-direction: column;
+    height: auto;
+  }
+  .home .content h1 {
+    font-size: 2.2rem;
+  }
+  .home .content p {
+    font-size: 1.3rem;
+  }
+  .home .content .btn {
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
+  }
+  
+  /* About Section */
+  .about .content h1 {
+    font-size: 1.6rem;
+  }
+  .about .content h3 {
+    font-size: 1.3rem;
+  }
+  .about .content p {
+    font-size: 1.2rem;
+  }
+  .image-moraa img {
+    max-width: 100%;
+    border-radius: 15px;
+  }
+  
+  /* Testimonials */
+  .testimonials .box-container-two {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+  
+  /* Shop Section */
+  .shop .jewerlybox ul li {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  
+  /* FAQ */
+  .faq {
+    margin: 2rem 1rem;
+  }
+  .faq h1,
+  .faq h2,
+  .faq p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  /* Contact Section */
+  .contact h1 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .contact h2 {
+    font-size: 1rem;
+  }
+  .contact .container {
+    flex-direction: column;
+  }
+  .contact .contactInfo,
+  .contact .contactForm {
+    width: 100%;
+    margin: 1rem 0;
+  }
+  
+  /* Footer */
+  .footer {
+    margin: 2rem 1rem 1rem 1rem;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .footer .footer-container,
+  .footer .support {
+    width: 100%;
+    padding: 1.5rem;
+  }
+  .footer .footer-nav ul li a {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+  .footer .logo {
+    font-size: 1.6rem;
+  }
+}
