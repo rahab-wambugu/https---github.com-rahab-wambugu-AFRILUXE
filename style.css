@@ -104,6 +104,7 @@ header .navbar .mainbar li a{
     padding: 1rem;
 }
 header .navbar a:hover{
+    background-color: var(--second-color);
     color: var(--second-color);
     border-bottom: 1px solid var(--second-color);
 }
