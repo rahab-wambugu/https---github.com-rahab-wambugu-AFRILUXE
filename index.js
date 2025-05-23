@@ -31,7 +31,6 @@ function showTestimonial(index) {
       testi.style.display = i === index ? 'block' : 'none';
     });
   }
-
   document.getElementById('prevArrow').addEventListener('click', () => {
     currentIndex = (currentIndex === 0) ? testimonials.length - 1 : currentIndex - 1;
     showTestimonial(currentIndex);
