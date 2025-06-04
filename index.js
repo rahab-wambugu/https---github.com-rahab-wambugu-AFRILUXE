@@ -47,5 +47,15 @@ function showTestimonial(index) {
     showTestimonial(currentIndex);
   });
 
-  showTestimonial(currentIndex);
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+  
+  const status = document.getElementById("messageStatus");
+  status.style.display = "block";
 
+  this.reset();
+
+  setTimeout(() => {
+      status.style.display = "none";
+    }, 3000);
+});

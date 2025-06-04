@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AFRILUXE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+
 <body>
+
 <header><!--header section-->
     <nav class="navbar"> <!--navigation bar-->
         
@@ -27,7 +29,7 @@
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#about">ABOUT</a></li> 
                 <li><a href="#shop">GALLERY</a></li> 
-                <li><a href="#"class="logo">Afri<span>Luxe.</span></a></li><!--logo section-->
+                <li><a href="#" class="logo">Afri<span>Luxe.</span></a></li><!--logo section-->
                 <li><a href="#testimonials">TESTIMONIALS</a></li>
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact">CONTACT</a></li>
@@ -42,7 +44,7 @@
 <section class="home" id="home"><!--home section-->
     <div class="container"><!--container section-->
         <div class="content"><!--content section-->
-            <h1 class="heading">Embrace Afro-Elegance</h1>
+            <h1>Embrace Afro-Elegance</h1>
             <p>We are a luxury African fashion brand dedicated to celebrating the rich heritage and artistry of Africa. Our collection features exquisite clothing and accessories that embody the essence of African elegance.</p>
             <a href="#shop" class="btn">Explore Collection</a>
         </div>
@@ -57,7 +59,7 @@
         <h1>Luxury African Fashion</h1>
         <h3>Embracing Africa</h3>
         <p>Discover the beauty of African fashion with our exclusive collection
-            of luxury clothing and accessories. From vibrant prints to elegant designs, we celebrate the rich heritage and artistry of Africa. Shop now and embrace the essence of African elegance.</p>
+            of luxury clothing and accessories. From vibrant prints to elegant designs, we celebrate the rich heritage and artistry of Africa. Shop now and embrace the essence of African elegance.
         </p>
         <a href="#shop" class="btn">Shop Now</a>
     </div>
@@ -129,21 +131,21 @@
 
 <section class="shop" id="shop"><!--shop section-->
     <h1>Our Collections</h1>
-    <h2 class="heading">Gallery</h2>
+    <h2>Gallery</h2>
     <p>Explore our curated collections that showcase the beauty and diversity of African fashion. Each piece is a testament to the artistry and craftsmanship of African designers.</p>
 
     <div class="jewerlybox"> <!--box container, to add images in this div-->
         <ul>  
             <li><figure>
-                <img src="images/5 Accessories From Safari Curios That Will Earn You An Afronista Stamp Of Approval - African Vibes.jpg" alt="jewerly" class="jewerly">
+                <img src="images/one.jpg" alt="jewerly" class="jewerly">
                 <figcaption class="caption">Safari collections</figcaption>
             </figure></li>
              <li><figure>
-                <img src="/images/Outfits of Epic Proportions (Published 2024).jpg" alt="jewerly" class="jewerly">
+                <img src="/images/two.jpg" alt="jewerly" class="jewerly">
                 <figcaption class="caption">Tabasamu Accessories</figcaption>
             </figure></li>
              <li><figure>
-                <img src="/images/download (3).jpg" alt="jewerly" class="jewerly">
+                <img src="/images/three.jpg" alt="jewerly" class="jewerly">
                 <figcaption class="caption">Mwaki 2-piece</figcaption>
             </figure></li>
             
@@ -229,45 +231,39 @@
            <p><i class="fa-solid fa-phone"></i>  <strong>Phone:</strong> 0702382524</p><br>
            <p><i class="fa-solid fa-location-pin"></i>  <strong>Address:</strong> 28 Norw Building, Nairobi, 00100 KEN.</p><br><br>
 
-            <span>
+            <div>
                 <ul class="socials">
                     <li><i class="fa-brands fa-github"></i></li>
-                    <li></li><i class="fa-brands fa-facebook"></i></li>
-                    <li></li><i class="fa-brands fa-linkedin"></i></li>
-                    <li></li><i class="fa-brands fa-whatsapp"></i></li>
+                    <li><i class="fa-brands fa-facebook"></i></li>
+                    <li><i class="fa-brands fa-linkedin"></i></li>
+                    <li><i class="fa-brands fa-whatsapp"></i></li>
                 </ul>
-            </span><br><br>
+            </div><br><br>
             <p>We typically respond within 12 hours</p>
         </div>
 
         <div class="contactForm">
-              <form>
+              <form id="contactForm" onsubmit="return sendMessage(event)">
                     <h2>Send Message</h2>
                     
                     <div class="input">
                         <div class="inputBox">
-                            <input type="text" name="email" required="required">
-                            <span>Email</span>
-                        </div>
-                        <div class="inputBox">
-                            <textarea required="required"></textarea>
-                            <span>Type your message...</span>
-                        </div>
-                        <div class="inputBox">
-                            <input type="submit" name="" value="Send message">
+                            <input type="email" id="email" value="Email" autocomplete="on" required="required">
+                        
+                            <textarea required="required">Type your message...</textarea>
+                            
+                            <input type="submit" value="Send message">
                         </div>
                     </div>
-
-                    
                 </form>
-            </div>
+                <p id="messageStatus" style="color: green; display: none;">Message Sent!</p>
         </div>
     </div>
 </div>
 
 <footer class="footer">
     <div  class="footer-container">
-        <a href="#"class="logo">Afri<span>Luxe.</span></a><!--logo section-->
+        <a href="#" class="logo">Afri<span>Luxe.</span></a><!--logo section-->
         <nav class="footer-nav">
         <ul class="nav-links">
              <li><a href="#home">Home</a></li> <!--to style close btn-->
@@ -291,7 +287,7 @@
     </div>
 
     <div class="support">
-        <p> Explore luxurious<br> african themed collections now </p>
+        <p> Explore luxurious<br> African themed collections now! </p>
         <a href="#shop" class="btn">Discover luxury</a>
 
 
