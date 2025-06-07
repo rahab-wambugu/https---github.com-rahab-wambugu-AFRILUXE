@@ -2,6 +2,9 @@ AFRILUXE
 --------
 
 Afriluxe is a brand that embraces African luxury and our rich heritage. 
+
+[Live demo ](https://rahab-afriluxe-rahab.netlify.app/#)
+
 ⚡ Color System 
 Primary colour is Soft Terracotta(Light Brown) #bd8a6f - it symbolises luxury, elegance and heritage. This has inspired backgrounds for the header, accordions, hover, buttons and a few icons.
  Second colour is amber yellow #f4c542 symbolizingg warmth, luxury and prosperity. For its ability to grab attention without being harsh, we have used it as background for about page, and button hover effect. It perfectly complements the primary colour. 
@@ -22,5 +25,3 @@ Primary colour is Soft Terracotta(Light Brown) #bd8a6f - it symbolises luxury, e
 
 
 
-Hosting on netflify:
-https://rahab-afriluxe-rahab.netlify.app/#
